@@ -1,10 +1,7 @@
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * The EventSchedulerApp class serves as the entry point for the Event Scheduling system.
- * It initializes advisors, submits customer queries, and manages the event scheduler lifecycle.
- */
+// Main application to test the event scheduler
 public class EventSchedulerApp {
     public static void main(String[] args) {
         // Create a list of advisors who will handle customer queries
@@ -21,12 +18,14 @@ public class EventSchedulerApp {
         scheduler.addQuery(new CustomerQuery("Issue 1"));
         scheduler.addQuery(new CustomerQuery("Issue 2"));
         scheduler.addQuery(new CustomerQuery("Issue 3"));
+        scheduler.addQuery(new CustomerQuery("Issue 4"));
+        scheduler.addQuery(new CustomerQuery("Issue 5"));
 
-        // Allow the scheduler to process tasks for 5 seconds before shutting down
+        // Allow the scheduler to process tasks for 10 seconds before shutting down
         try {
-            Thread.sleep(5000); // Simulate runtime duration
+            Thread.sleep(10000); // Simulate runtime duration
         } catch (InterruptedException e) {
-            e.printStackTrace(); // Print stack trace if interrupted
+            e.printStackTrace();
         }
 
         // Gracefully shut down the event scheduler
